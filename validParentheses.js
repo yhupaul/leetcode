@@ -20,3 +20,5 @@ isValid = s => {
   // Check empty stack
   return stack.length ? false : true;
 }
+
+// finally I am able to understand it
