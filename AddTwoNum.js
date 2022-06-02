@@ -1,3 +1,4 @@
+// this solution is working but Leetcode wants us to use ListNode funcion and some reason this code is not acceopted
 var addTwoNumbers = function(l1, l2) {
   let result;
   let firNum = l1.reverse().join(''); 
@@ -6,7 +7,7 @@ var addTwoNumbers = function(l1, l2) {
   // console.log(secNum)
    
   let total = Number(firNum) + Number(secNum); 
-  console.log(total)
+  // console.log(total)
   result = total.toString().split('').reverse().map(Number);
   console.log(result)
 };
