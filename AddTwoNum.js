@@ -1,4 +1,4 @@
-// this solution is working but Leetcode wants us to use ListNode funcion and some reason this code is not acceopted
+// this solution is working but Leetcode wants us to use ListNode funcion and some reason this code is not acceopted . there is nums limited so this function is not working for bigger nums
 var addTwoNumbers = function(l1, l2) {
   let result;
   let firNum = l1.reverse().join(''); 
