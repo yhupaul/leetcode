@@ -1,14 +1,19 @@
 var findMin = function(nums) {
-  let stan;  
-  let result = [];
-    for(let i=0; i < nums.length; i++) {
-        if(nums[i] > nums[i+1]) {
-          result.push(nums[i+1])
-            
-        } else {
-            result.push(nums[i])
-        }
-        return result[0];
+  let first = 0;
+  let last = nums.length - 1;
+  let mid;
+
+  while(first < last)  {
+    if(nums[first] < nums[last]) {
+      return nums[first];
     }
-    
+    mid = Math.floor((first + last) / 2);
+
+    if(nums[mid] >= nums[last]) {
+      first = mid + 1
+    } else {
+      last = mid;
+    }
+  }
+  return nums[first];
 };
