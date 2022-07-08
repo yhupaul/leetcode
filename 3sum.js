@@ -53,13 +53,3 @@ var threeSum = function(nums) {
     }
     return result;
 };
-
-        // for (let j=i+1; j<nums.length; j++) {
-        //     if(j > i+1 && nums[j] === nums[j - 1]) continue;
-        //     for (let k=j+1; k<nums.length; k++) {
-        //         if(k > j+1 && nums[k] === nums[k - 1]) continue;
-        //         if(nums[i] + nums[j] + nums[k] === 0){
-        //             result.push([nums[i], nums[j], nums[k]]);
-        //         }
-        //     }
-        // }
