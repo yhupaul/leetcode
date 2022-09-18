@@ -24,11 +24,22 @@ target = 9
 
 map = {}
 i = 0
-value = 1
+value = 2
+correspondValue = target - value
 */
 
 
  const twoSum = function(nums, target) {
     let hashMap = {};
-
+    for (let i=0; i<nums.length; i++){
+        let value = nums[i]
+        let correspondValue = target - value 
+        if(hashMap[correspondValue] !== undefined) {
+            //if there is corespondvalue is in the hashMap 
+            return [hashMap[correspondValue], i]
+        } else {
+            // record hashMap = {nums[i]: i..}
+            hashMap[value] = i
+        }
+    }
  }
