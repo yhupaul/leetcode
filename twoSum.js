@@ -29,20 +29,20 @@ correspondValue = target - value
 */
 
 
-//  const twoSum = function(nums, target) {
-//     let hashMap = {};
-//     for (let i=0; i<nums.length; i++){
-//         let value = nums[i]
-//         let correspondValue = target - value 
-//         if(hashMap[correspondValue] !== undefined) {
-//             //if there is corespondvalue is in the hashMap 
-//             return [hashMap[correspondValue], i]
-//         } else {
-//             // record hashMap = {nums[i]: i..}
-//             hashMap[value] = i
-//         }
-//     }
-//  }
+ const twoSum = function(nums, target) {
+    let hashMap = {};
+    for (let i=0; i<nums.length; i++){
+        let value = nums[i]
+        let correspondValue = target - value 
+        if(hashMap[correspondValue]) {
+            //if there is corespondvalue is in the hashMap 
+            return [hashMap[correspondValue], i]
+        } else {
+            // record hashMap = {nums[i]: i..}
+            hashMap[value] = i
+        }
+    }
+ }
 
 /*
 only one valid answer exists
@@ -83,6 +83,4 @@ for (let i=0; i<nums.lenght; i++) {
 //       return [map.get(target-nums[i]) , i]
 //     map.set(nums[i], i)  // map =  {2:0, 7:1, 11:2, 15:3}    i = 0  map = {2:0} i = 1
 //   }
-const twoSum = function(nums, target) {
 
-}
